@@ -26,7 +26,7 @@ import { useForm} from 'react-hook-form';
       if (userSelected) {
          axios
            .put(
-             `http://users-crud1.herokuapp.com/users/${userSelected.id}/`,
+             `https://users-crud1.herokuapp.com/users/${userSelected.id}/`,
              data
            )
            .then(() => {

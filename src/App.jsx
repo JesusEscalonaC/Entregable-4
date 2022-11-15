@@ -8,15 +8,16 @@ function App() {
   const [usersList, setUsersList] = useState([]);
   const [userSelected, setUserSelected] = useState(null);
   const [userDeleted, setUserDeleted] = useState(null);
+
   useEffect(()=>{
     axios
-    .get('http://users-crud1.herokuapp.com/users/')
+    .get('https://users-crud1.herokuapp.com/users/')
     .then((res)=> setUsersList(res.data))
   },[])
 
   const getUsers = () =>{
     axios
-    .get('http://users-crud1.herokuapp.com/users/')
+    .get('https://users-crud1.herokuapp.com/users/')
     .then((res)=> setUsersList(res.data))
   }
 
@@ -27,7 +28,7 @@ function App() {
   
   const deleteUser = (id) => {
     axios
-    .delete(`http://users-crud1.herokuapp.com/users/${id}/`)
+    .delete(`https://users-crud1.herokuapp.com/users/${id}/`)
     .then(() => getUsers());
   }
 
