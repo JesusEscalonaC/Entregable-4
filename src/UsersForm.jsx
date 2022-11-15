@@ -37,7 +37,7 @@ import { useForm} from 'react-hook-form';
            
        } else {
         axios
-             .post('http://users-crud1.herokuapp.com/users/', data)
+             .post('https://users-crud1.herokuapp.com/users/', data)
              .then(() => getUsers())
              .catch((error) => console.log(error.response?.data));
              reset(initialValues);
